@@ -1,2 +1,2 @@
 # Curso_Pyton
-Ciursode Python MIT
+Curso de Python MIT
