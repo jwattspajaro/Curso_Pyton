@@ -101,7 +101,8 @@ Further editing our code, you could type
 ``` 
 - It turns out that some functions take many arguments.
 - We can use a comma , to pass in multiple arguments by editing our code as follows:
-        ``` Python
+- 
+``` Python
         # Ask the user for their name
         name = input("What's your name? ")
 
@@ -110,3 +111,76 @@ Further editing our code, you could type
 ``` 
 The output in the terminal, if we typed “David” we would be hello, David. Success.
 
+#### Strings and Paremeters
+- A string, known as a str in Python, is a sequence of text.
+- Rewinding a bit in our code back to the following, there was a visual side effect of having the result appear on multiple lines:
+
+``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+        print("hello,")
+        print(name)
+```
+- Functions take arguments that influence their behavior. If we look at the documentation for print you’ll notice we can learn a lot about the arguments that the print function takes.
+- Looking at this documentation, you’ll learn that the print function automatically include a piece of code end='\n'. This \n indicates that the print function will automatically create a line break when run. The print function takes an argument called end` and the default is to create a new line.
+- However, we can technically provide an argument for end ourselves such that a new line is not created!
+- We can modify our code as follows:
+
+``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+        print("hello,", end="")
+        print(name)
+``` 
+By providing end="" we are over-writing the default value of end such that it never creates a new line after this first print statement. Providing the name as “David”, the output in the terminal window will be hello, David.
+
+- Parameters, therefore, are arguments that can be taken by a function.
+
+- You can learn more in Python’s documentation on print.
+
+#### A small problem with quotation marks
+
+- Notice how adding quotation marks as part of your string is challenging.
+- print("hello,"friend"") will not work and the compiler will throw an error.
+- Generally, there are two approaches to fixing this. First, you could simply change the quotes to single quote marks.
+- Another, more commonly used approach would be code as print("hello, \"friend\""). The backslashes tell the compiler that the following character should be considered a quotation mark in the string and avoid a compiler error.
+
+#### Formatting Strings
+- Probably the most elegant way to use strings would be as follows:
+``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+        print(f"hello, {name}")
+```
+#### Notice the f in print(f"hello, {name}"). This f is a special indicator to Python to treat this string a special way, different than previous approaches we have illustrated in this lecture. Expect that you will be using this style of strings quite frequently in this course.
+More on Strings
+- You should never expect your user will cooperate as intended. Therefore, you will need to ensure that the input of your user is corrected or checked.
+- It turns out that built into strings is the ability to remove whitespace from a string.
+- By utilizing the method strip on name as name = name.strip(), it will strip all the whitespaces on the left and right of the users input. You can modify your code to be:
+
+``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+
+        # Remove whitespace from the str
+        name = name.strip()
+
+        # Print the output
+        print(f"hello, {name}")
+```
+Rerunning this program, regardless of how many spaces you type before or after the name, it will strip off all the whitespace.
+
+- Using the title method, it would title case the user’s name:
+``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+
+        # Remove whitespace from the str
+        name = name.strip()
+
+        # Capitalize the first letter of each word
+        name = name.title()
+
+        # Print the output
+        print(f"hello, {name}")
+```        
