@@ -51,12 +51,59 @@ Further editing our code, you could type
 - The result in the terminal window would be
 
 ``` Python
-What's your name? David
-hello
-David
+        What's your name? David
+        hello
+        David
 ``` 
 - We are getting closer to the result we might intend!
 
-- You can learn more in Python’s documentation on data types.
+- You can learn more in Python’s documentation on [data types](https://docs.python.org/3/library/datatypes.html).
 
+#### Comments
+- Comments are a way for programmers to track what they are doing in their programs and even inform others about their intentions for a block of code. In short, they are notes for yourself and others that will see your code!
+- You can add comments to your program to be able to see what it is that your program is doing. You might edit your code as follows:
+
+# Ask the user for their name
+
+``` Python
+        name = input("What's your name? ")
+        print("hello,")
+        print(name)
+
+``` 
+- Comments can also serve as to-do list for you.
+
+#### Pseudocode
+- Pseudocode is an important type of comment that becomes a special type of to-do list, especially when you don’t understand how to accomplish a coding task. For example, in your code, you might edit your code to say:
+``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+
+        # Print hello
+        print("hello,")
+
+        # Print the name inputted
+        print(name)
+
+``` 
+#### Further Improving Your First Python Program
+- We can further edit our code as follows:
+
+``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+
+        # Print hello and the inputted name
+        print("hello, " + name)
+``` 
+- It turns out that some functions take many arguments.
+- We can use a comma , to pass in multiple arguments by editing our code as follows:
+        ``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+
+        # Print hello and the inputted name
+        print("hello,", name)
+``` 
+The output in the terminal, if we typed “David” we would be hello, David. Success.
 
