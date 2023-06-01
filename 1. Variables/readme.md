@@ -44,10 +44,12 @@ If you edit your code as follows, you will notice an error
 -The program will return hello, name in the terminal window regardless of what the user types.
 Further editing our code, you could type
 ``` Python
+
     name = input("What's your name? ")
     print("hello,")
     print(name)
-``` P
+    
+``` 
 - The result in the terminal window would be
 
 ``` Python
@@ -55,6 +57,7 @@ Further editing our code, you could type
         hello
         David
 ``` 
+
 - We are getting closer to the result we might intend!
 
 - You can learn more in Python’s documentation on [data types](https://docs.python.org/3/library/datatypes.html).
