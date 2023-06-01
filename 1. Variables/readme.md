@@ -78,6 +78,7 @@ Further editing our code, you could type
 
 #### Pseudocode
 - Pseudocode is an important type of comment that becomes a special type of to-do list, especially when you don’t understand how to accomplish a coding task. For example, in your code, you might edit your code to say:
+
 ``` Python
         # Ask the user for their name
         name = input("What's your name? ")
@@ -101,7 +102,7 @@ Further editing our code, you could type
 ``` 
 - It turns out that some functions take many arguments.
 - We can use a comma , to pass in multiple arguments by editing our code as follows:
-- 
+
 ``` Python
         # Ask the user for their name
         name = input("What's your name? ")
@@ -171,6 +172,7 @@ More on Strings
 Rerunning this program, regardless of how many spaces you type before or after the name, it will strip off all the whitespace.
 
 - Using the title method, it would title case the user’s name:
+- 
 ``` Python
         # Ask the user for their name
         name = input("What's your name? ")
@@ -184,3 +186,83 @@ Rerunning this program, regardless of how many spaces you type before or after t
         # Print the output
         print(f"hello, {name}")
 ```        
+- By this point, you might be very tired of typing python repeatedly in the terminal window. You cause us the up arrow of your keyboard to recall the most recent terminal commands you have made.
+- Notice that you can modify your code to be more efficient:
+
+``` Python
+        # Ask the user for their name
+        name = input("What's your name? ")
+
+        # Remove whitespace from the str and capitalize the first letter of each word
+        name = name.strip().title()
+
+        # Print the output
+        print(f"hello, {name}")
+``` 
+- This creates the same result as your previous code.
+
+#### We could even go further!
+
+``` Python
+        # Ask the user for their name, remove whitespace from the str and capitalize the first letter of each word
+        name = input("What's your name? ").strip().title()
+
+        # Print the output
+print(f"hello, {name}")
+``` 
+- You can learn more about strings in Python’s documentation on str
+
+#### Integers or int
+- In Python, an integer is referred to as an int.
+- In the world of mathematics, we are familiar with +, -, *, /, and % operators. That last operator % or modulo operator may not be very familiar to you.
+- You don’t have to use the text editor window in your compiler to run Python code. Down in your terminal, you can run python alone. You will be presented with >>> in the terminal window. You can then run live, interactive code. You could type 1+1 and it will run that calculation. This mode will not commonly be used during this course.
+- Opening up VS Code again, we can type code calculator.py in the terminal. This will create a new file in which we will create our own calculator.
+- First, we can declare a few variables.
+
+``` Python
+        x = 1
+        y = 2
+
+        z = x + y
+
+        print(z)
+
+``` 
+Naturally, when we run python calculator.py we get the result in the terminal window of 3. We can make this more interactive using the input function.
+
+``` Python
+        x = input("What's x? ")
+        y = input("What's y? ")
+
+        z = x + y
+
+        print(z)
+
+        print(z)
+
+``` 
+- Running this program, we discover that the output is incorrect as 12. Why might this be?
+- Prior, we have seen how the + sign concatenates two strings. Because your input from your keyboard on your computer comes into the - compiler as text, it is treated a string. We, therefore, need to convert this input from a string to an integer. We can do so as follows:
+
+``` Python
+        x = input("What's x? ")
+        y = input("What's y? ")
+
+        z = int(x) + int(y)
+
+        print(z)
+``` 
+
+The result is now correct. The use of int(x), is called “casting” where a value is temporarily changed from one type of variable (in this case a string) to another (here, an integer).
+
+- We can further improve our program as follows:
+
+``` Python
+        x = int(input("What's x? "))
+        y = int(input("What's y? "))
+
+        print(x + y)
+``` 
+This illustrates that you can run functions on functions. The most inner function is run first, and then the outer one is run. First, the input function is run. Then, the int function.
+
+- You can learn more in Python’s Documenation of [int.](https://docs.python.org/3/library/functions.html?highlight=float#int)
